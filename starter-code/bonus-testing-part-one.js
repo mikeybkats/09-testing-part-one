@@ -20,10 +20,12 @@ var assert = require('./vendor/assert');
 
 //  Below, we will write an example of our test in action:
 
-var ricksFaveAnimal;
+var ricksFaveAnimal = ' ';
+
 
 function testRicksFaveAnimal() {
-  assert ();
+  assert (ricksFaveAnimal, 'ricksFaveAnimal exists',
+  'ricksFaveAnimal is a ' + typeof ricksFaveAnimal);
 }
 
 testRicksFaveAnimal();
@@ -36,8 +38,6 @@ The zoo is closing in 20 minutes. You still haven't seen your four favorite
 animals. You only have time for one. How do you choose just one?!
 */
 
-var favoriteAnimals = ['elephants', 'penguins', 'eagles', 'camels'];
-var nextAnimal;
 
 /* NOTE:
 Write a test FIRST! Use the 'assert()' function below to ensure
@@ -49,10 +49,13 @@ just 'penguin').
 Remember to: pass in your expression, and write a success and a failure
 message. */
 
+var favoriteAnimals = ['elephants', 'penguins', 'eagles', 'camels'];
+var nextAnimal;
+
 function testWhichAnimal() {
   // TODO: Complete this assert function.
   // Don't forget your three arguments!
-  assert();
+  assert(nextAnimal, 'nextAnimal is equal to the object in favoriteAnimals', 'nextAnimal is a ' + typeof nextAnimal);//that the favoriteAnimals array was assigned to nextAnimal
 };
 
 testWhichAnimal();
@@ -62,3 +65,18 @@ nextAnimal variable ... then invoke your test!
 When ready, execute this program in your terminal with node
 (node bonus-testing-part-one)  :-)
 Your code begins on the next line: */
+var favoriteAnimals = favoriteAnimals[Math.round(Math.random() * (favoriteAnimals.length - 0) + 0)];
+console.log(favoriteAnimals);
+
+// animalsTest = function(){
+//   favoriteAnimals.map(function(current, index, value){
+//     if (nextAnimal === current){
+//       return true;
+//     }else { return false; }
+//   }).forEach(function(object){
+//     if (object === true){
+//       nextAnimal = true;
+//     } else { nextAnimal = false; }
+//   });
+//   return nextAnimal;
+// };
